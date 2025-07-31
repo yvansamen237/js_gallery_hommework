@@ -1,5 +1,14 @@
 const boxImageOldText = "Hover over an image below to display here.";
 
+function setTabIndex(){
+    const currentImages = document.querySelectorAll(".preview");
+
+    for (let i = 0; i < currentImages.length; i++) {
+        currentImages[i].setAttribute("tabindex", "0")
+        console.log("image " + currentImages[i]);
+    }
+}
+
 function upDate(previewPic){
     const boxImage = document.getElementById('image');
     boxImage.innerHTML = previewPic.alt;
